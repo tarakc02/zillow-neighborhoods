@@ -19,7 +19,7 @@ download_list <- neighborhood_db_page %>%
         url = unlist(html_attrs(.))
     ) %>%
     select(area, url) %>%
-    mutate(url = paste0("http://www.zillow.com", url)) %>%
+    #mutate(url = paste0("http://www.zillow.com", url)) %>%
     mutate(destfile = paste0("downloaded-data/", basename(url)))
 
 # i'll use this directory to place all of the data
